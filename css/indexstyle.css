@@ -1,126 +1,70 @@
-*, ::before, ::after {
-    box-sizing: inherit;
-}
-
-.root {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
-}
-
-.container {
+.intro {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.content {
-    padding: 0px 150px;
-}
-
-@media (max-width: 1080px) {
-    .leftpane {
-        left: 20px;
-        right: auto;
-    }
-}
-
-.leftpane {
-    width: 40px;
-    position: fixed;
-    bottom: 0px;
-    left: 40px;
-    right: auto;
-    z-index: 10;
-}
-
-@media (max-width: 1080px) {
-    .rightpane {
-        left: auto;
-        right: 20px;
-    }
-}
-
-.rightpane {
-    width: 40px;
-    position: fixed;
-    bottom: 0px;
-    right: 40px;
-    z-index: 10;
-}
-
-.vertical-email {
-    display: flex;
-    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-    align-items: center;
-    position: relative;
-}
-
-.vertical-email::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0px auto;
-    background-color: black;
-}
-
-.vertical-email a {
-    margin: 20px auto;
-    padding: 10px;
-    font-family: var(--font-mono);
-    font-size: var(--fs-xxs);
-    line-height: var(--fs-lg);
-    letter-spacing: 0.1em;
-    writing-mode: vertical-rl;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-}
-
-.vertical-media {
-    display: flex;
     flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    margin: 0px;
+    align-items: flex-start;
+    min-height: 100vh;
     padding: 0px;
-    list-style: none;
-}
-
-.vertical-media::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 90px;
     margin: 0px auto;
-    background-color: black;
+    max-width: 1000px;
 }
 
-ul {
+.hello h1 {
+    margin: 0px 0px 30px 4px;
+    color: #666;
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fs-sm));
+    font-weight: 400;
+}
+
+.big-heading {
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+}
+
+.hello h3 {
+    margin-top: 10px;
+    line-height: 0.9;
+    color: #666;
+}
+
+.hello p {
+    margin: 20px 0px 0px;
+    max-width: 540px;
+}
+
+p {
     display: block;
-    list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+h2 {
+    display: block;
+    font-size: 1.5cm;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
-.vertical-media li a i {
-    width: 20px;
-    height: 20px;
-    padding: 20px;
+h3 {
+    display: block;
+    font-size: 1.17cm;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px 0px 10px;
+    font-weight: 600;
+    line-height: 1.1;
 }

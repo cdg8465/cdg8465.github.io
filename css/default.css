@@ -12,6 +12,15 @@
     --fs-xl: 20px;
     --fs-xxl: 22px;
     --fs-heading: 32px;
+    
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
 }
 
 body, html {
@@ -47,7 +56,6 @@ body, html {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-weight: bold;
     font-size: 26px;
 }
 
@@ -55,4 +63,120 @@ body, html {
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    padding: 0px 150px;
+}
+
+@media (max-width: 1080px) {
+    .leftpane {
+        left: 20px;
+        right: auto;
+    }
+}
+
+.leftpane {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+}
+
+@media (max-width: 1080px) {
+    .rightpane {
+        left: auto;
+        right: 20px;
+    }
+}
+
+.rightpane {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    right: 40px;
+    z-index: 10;
+}
+
+.vertical-email {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.vertical-email::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: black;
+}
+
+.vertical-email a {
+    margin: 20px auto;
+    padding: 10px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-xxs);
+    line-height: var(--fs-lg);
+    letter-spacing: 0.1em;
+    writing-mode: vertical-rl;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+}
+
+.vertical-media {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.vertical-media::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: black;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.vertical-media li a i {
+    width: 20px;
+    height: 20px;
+    padding: 20px;
 }
