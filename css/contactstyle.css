@@ -1,0 +1,39 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: flex-start;
+
+    min-height: 100vh;
+    max-width: 1000px;
+
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.heading h1 {
+    display: block;
+    
+    margin: 0px;
+
+    font-weight: bold;
+
+    color: var(--color);
+}
+
+p {
+    margin: 20px 0px 0px;
+
+    max-width: 540px;
+    
+    color: var(--color-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0px 0px 10px;
+}
