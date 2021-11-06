@@ -12,6 +12,14 @@
     --fs-xl: 20px;
     --fs-xxl: 22px;
     --fs-heading: 32px;
+
+    --background-color: #FFFFCC;
+
+    --navbar-color: #303030;
+    --navbar-button-hover-color: #DDD;
+
+    --color-light: #FF9966;
+    --color: #FF6600;
     
     min-height: 100vh;
     display: grid;
@@ -24,7 +32,7 @@
 }
 
 body, html {
-    background-color: #FFFFCC;
+    background-color: var(--background-color);
     font-family: var(--font-calibre);
     margin: 0px;
     width: 100%;
@@ -39,7 +47,7 @@ body, html {
 
 /* Adds background color to the nav bar */
 .topnav {
-    background-color: #303030;
+    background-color: var(--navbar-color);
     overflow: hidden;
 }
 
@@ -61,8 +69,8 @@ body, html {
 
 /* Changes the color of the nav bar links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: var(--navbar-button-hover-color);
+    color: var(--color);
 }
 
 .container {
@@ -91,6 +99,10 @@ body, html {
     z-index: 10;
 }
 
+.leftpane i:hover {
+    color: var(--color);
+}
+
 @media (max-width: 1080px) {
     .rightpane {
         left: auto;
@@ -104,6 +116,10 @@ body, html {
     bottom: 0px;
     right: 40px;
     z-index: 10;
+}
+
+.rightpane a:hover {
+    color: var(--color);
 }
 
 .vertical-email {

@@ -13,10 +13,10 @@
 
 .hello h1 {
     margin: 0px 0px 30px 4px;
-    color: #666;
     font-family: var(--font-mono);
     font-size: clamp(var(--fs-sm));
     font-weight: 400;
+    color: var(--color-light);
 }
 
 .big-heading {
@@ -24,15 +24,16 @@
     font-size: clamp(40px, 8vw, 80px);
 }
 
-.hello h3 {
+.short h3 {
     margin-top: 10px;
     line-height: 0.9;
-    color: #666;
+    color: var(--color);
 }
 
-.hello p {
+.long p {
     margin: 20px 0px 0px;
     max-width: 540px;
+    color: var(--color-light);
 }
 
 p {
@@ -67,4 +68,27 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0px 0px 10px;
     font-weight: 600;
     line-height: 1.1;
+}
+
+button {
+    background-color: var(--background-color);
+    border-color: black;
+
+    margin-top: 40px;
+
+    border-radius: 4px;
+    border-style: solid;
+
+    width: 200px;
+    height: 75px;
+
+    font-family: var(--font-calibre);
+    font-weight: 500;
+    font-size: var(--fs-xl);
+}
+
+button:hover {
+    cursor: pointer;
+    border-color: var(--color);
+    color: var(--color);
 }
