@@ -1,1 +1,1 @@
-# Collin Giess's Website
+A website for displaying my talents
